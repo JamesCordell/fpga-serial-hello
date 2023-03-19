@@ -15,7 +15,7 @@ reg     [10:0]     conts          = 0;               // Counter for seconds
 wire              clk1s          = (conts > 2047);   //  Clock 1 second
 
 always @(posedge clk)
-  if(contus == 25) // 25MHz clock, divide by 25
+  if(contus == 12) // 12MHz clock, divide by 12
     contus <= 0;
   else
     contus <= contus + 1;
